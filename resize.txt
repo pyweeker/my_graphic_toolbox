@@ -1,19 +1,42 @@
  For example, to convert an image to be 800x600 you would use the following command:
+If by converting to the specified dimensions the aspect ratio will be messed up the image will be resized to the closest ratio.
 
 convert imagename.jpg -resize 800x600 newimagename.jpg
 --------------------------------------------------------
 
-If by converting to the specified dimensions the aspect ratio will be messed up the image will be resized to the closest ratio.
+
+
 
 To force the conversion to be the exact size, use the following command:
 
 convert imagename.jpg -resize 800x600! newimagename.jpg
+-------------------------------------------------------
+
+
+
+
 
 You don't have to specify the height and the width as part of the resize command. For example, if you want the width to be 800 and you don't care about the height you can use the following command:
 
 convert imagename.jpg -resize 800 newimagename.jpg
+--------------------------------------------------
+
+
+
+
 
 To resize an image to be a specified height use the following command:
 
 convert imagename,jpg -resize x600 newimagename.jpg
+---------------------------------------------------
 
+
+
+ Finally adjusting the compression quality will make the physical file size smaller. 
+ convert imagename.jpg -quality 90 newimage.jpg
+ ----------------------------------------------
+ 
+ 
+ >>> https://www.lifewire.com/convert-linux-command-unix-command-4097060
+ 
+ 
