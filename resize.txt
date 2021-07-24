@@ -40,3 +40,26 @@ convert imagename,jpg -resize x600 newimagename.jpg
  >>> https://www.lifewire.com/convert-linux-command-unix-command-4097060
  
  
+To resize multiple files, you can try the following command (as suggested by @test30)
+
+find . -maxdepth 1 -iname "*.jpg" | xargs -L1 -I{} convert -resize 30% "{}" _resized/"{}"
+-----------------------------------------------------------------------------------------
+
+
+
+Par exemple, si vous souhaitez optimiser toutes les images JPG d’un répertoire :
+
+jpegoptim -t --all-progressive --strip-all *.jpg
+------------------------------------------------
+
+
+
+Options utilisées dans cet exemple :
+
+-t : affiche les informations de traitement à l’écran (nom de fichier, résolution, config du jpg, taille origine, taille optimisée, etc.)
+
+--all-progressive : créé des jpg progressifs : ils seront chargés progressivement et non d’un coup (pratique pour les gros fichiers)
+
+--strip-all : enlève les méta-données (Commentaires et données Exif)
+
+*.jpg : tous les fichiers dont l’extension est jpg
