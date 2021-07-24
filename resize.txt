@@ -69,3 +69,7 @@ Options utilisées dans cet exemple :
 --strip-all : enlève les méta-données (Commentaires et données Exif)
 
 *.jpg : tous les fichiers dont l’extension est jpg
+
+
+Fixer la taille de facon precise par exemple a 500 ko:
+jpegoptim --size=500k target_one_mega.jpg
