@@ -37,6 +37,12 @@ convert imagename,jpg -resize x600 newimagename.jpg
  ----------------------------------------------
  
  
+ 
+ convert "images/*.jpg[250x]" -set filename:base "%[basename]" "images/new_folder/%[filename:base].jpg"
+ ------------------------------------------------------------------------------------------------------
+ 
+ 
+ 
  >>> https://www.lifewire.com/convert-linux-command-unix-command-4097060
  
  
